@@ -1,7 +1,7 @@
 body {
   background-color: #1b1b2f;
   color: #dcdcdc;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Rubik', sans-serif; 
   font-size: 1.1em; 
   line-height: 1.6; 
   margin: 0;
@@ -29,7 +29,7 @@ a:hover {
 button {
   background-color: #4c5c68; /
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
   border: none;
   border-radius: 10px; 
   padding: 10px 20px;

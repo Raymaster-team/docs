@@ -1,2 +1,2 @@
-# docs
+# Raymaster Documentation
 docs for raymaster

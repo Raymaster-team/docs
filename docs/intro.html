@@ -15,7 +15,17 @@
         return response.text();
       })
       .then(data => {
-        document.getElementById('navbar').innerHTML = data;
+        const navbar = document.getElementById('navbar');
+        navbar.innerHTML = data;
+        // Add styles dynamically
+        navbar.style.backgroundColor = '#1E3A5F';
+        navbar.style.color = '#FFFFFF';
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.color = '#FFFFFF';
+          link.addEventListener('mouseover', () => link.style.color = '#FFD700');
+          link.addEventListener('mouseout', () => link.style.color = '#FFFFFF');
+        });
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>

@@ -4,6 +4,18 @@
   <title>Introduction</title>
 </head>
 <body>
+  <div id="navbar"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+  
   <h3><a href="https://github.com/Raymaster-team/RaymasterOS">Raymaster</a></h3>
 
   <p>Documentation for Raymaster <a href="https://github.com/Raymaster-team/docs/">Contribute</a></p>

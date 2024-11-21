@@ -18,17 +18,22 @@
         const navbar = document.getElementById('navbar');
         navbar.innerHTML = data;
         // Add styles dynamically
-        navbar.style.backgroundColor = '#1E3A5F';
+        navbar.style.backgroundColor = '#3578A6';
         navbar.style.color = '#FFFFFF';
         const links = navbar.querySelectorAll('a');
         links.forEach(link => {
-          link.style.color = '#FFFFFF';
+          link.style.color = '#89CFF0';
           link.addEventListener('mouseover', () => link.style.color = '#B3E5FC');
           link.addEventListener('mouseout', () => link.style.color = '#89CFF0');
         });
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
+
+  
+ <p> </p>
+ <p> </p>
+ <p> </p>
 
   
   <h3><a href="https://github.com/Raymaster-team/RaymasterOS">Raymaster</a></h3>

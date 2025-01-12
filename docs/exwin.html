@@ -1,8 +1,35 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExWin Documentation</title>
     <link rel="stylesheet" href="style.css">
+      <div id="navbar"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        const navbar = document.getElementById('navbar');
+        navbar.innerHTML = data;
+        // Add styles dynamically
+        navbar.style.backgroundColor = '#1B4D6E';
+        navbar.style.color = '#FFFFFF';
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.color = '#89CFF0';
+          link.addEventListener('mouseover', () => link.style.color = '#B3E5FC');
+          link.addEventListener('mouseout', () => link.style.color = '#89CFF0');
+        });
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
 </head>
 <body>
     <h1>Welcome to the ExWin Documentation</h1>
@@ -17,7 +44,5 @@
     <a href="https://discord.gg/cUP85QjAyk">Discord Server</a>
     <a href="https://github.com/Raymaster-team">Github (has source code</a>
     </div>
-
-
-
-</body></html>
+</body>
+</html>

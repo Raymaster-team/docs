@@ -1,0 +1,23 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExWin Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to the ExWin Documentation</h1>
+    <div></div>
+    <h2>This is a sub document of the RaymasterOS documentation</h2>
+    <div></div>
+    <h3>Introduction</h3>
+    <div></div>
+    <p>ExWin is the Display Compositor for Raymaster OS. It is programmed in Rust using the Smithay library (which i just so happen to be learning as i write this document). Alot of this code is probably really crappy. I have no experience in what im doing but i hope that i'll understand what im doing more if i write what i learn as i learn it. Hopefully this documentation helps you if you intend to contibute to this silly project that i dont actually have much faith in. Anyways, without further ado lets get the links here for resources about Raymaster and then onto the documentation!</p>
+    <h3>Links</h3>
+    <div style="text-align: center">
+    <a href="https://discord.gg/cUP85QjAyk">Discord Server</a>
+    <a href="https://github.com/Raymaster-team">Github (has source code</a>
+    </div>
+
+
+
+</body></html>

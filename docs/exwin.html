@@ -4,81 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExWin</title>
-    <style>
-        exwin {
-	background-color: #000000;
-}
-
-h1 {
-	font-family: Arial, sans-serif;
-	color: #97a0f0;
-	text-align: center;
-}
-
-h2 {
-	font-family: Arial, sans-serif;
-	color: #ffffff;
-	text-align: center;
-}
-
-h3 {
-	font-family: Arial, sans-serif;
-	color: #ffffff;
-	text-align: center;
-}
-
-p {
-	font-family: Arial, sans-serif;
-	color: #ffffff;
-	text-align: left;
-	padding: 1rem 5rem 5rem 1rem;
-}
-
-a {
-	font-family: Arial, sans-serif;
-	text-align: center;
-}
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-      <div id="navbar"></div>
-
-  <script>
-    fetch('navbar.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+    <style>
+        body {
+            background-color: #000000;
+            font-family: "Rubik", Arial, sans-serif;
         }
-        return response.text();
-      })
-      .then(data => {
-        const navbar = document.getElementById('navbar');
-        navbar.innerHTML = data;
-        // Add styles dynamically
-        navbar.style.backgroundColor = '#1B4D6E';
-        navbar.style.color = '#FFFFFF';
-        const links = navbar.querySelectorAll('a');
-        links.forEach(link => {
-          link.style.color = '#89CFF0';
-          link.addEventListener('mouseover', () => link.style.color = '#B3E5FC');
-          link.addEventListener('mouseout', () => link.style.color = '#89CFF0');
-        });
-      })
-      .catch(error => console.error('Error loading navbar:', error));
-  </script>
+
+        h1, h2, h3 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            color: #97a0f0;
+        }
+
+        p {
+            color: #ffffff;
+            text-align: left;
+            padding: 1rem 5rem 5rem 1rem;
+        }
+
+        a {
+            text-align: center;
+        }
+    </style>
 </head>
-<body style="exwin">
+<body>
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                const navbar = document.getElementById('navbar');
+                navbar.innerHTML = data;
+                // Adjust navbar styles dynamically
+                navbar.style.backgroundColor = '#1B4D6E';
+                navbar.style.color = '#FFFFFF';
+                navbar.style.padding = '5px 0';  // Reduced padding
+                navbar.style.height = '40px';  // Reduced height
+
+                const links = navbar.querySelectorAll('a');
+                links.forEach(link => {
+                    link.style.color = '#89CFF0';
+                    link.addEventListener('mouseover', () => link.style.color = '#B3E5FC');
+                    link.addEventListener('mouseout', () => link.style.color = '#89CFF0');
+                });
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
     <h3>Welcome to the ExWin Documentation</h3>
-    <div></div>
-    <div></div>
     <h5>Introduction</h5>
-    <div></div>
-    <p>ExWin is the Display Compositor for Raymaster OS. It is programmed in Rust using the Smithay library (which i just so happen to be learning as i write this document). Alot of this code is probably really crappy. I have no experience in what im doing but i hope that i'll understand what im doing more if i write what i learn as i learn it. Hopefully this documentation helps you if you intend to contibute to this silly project that i dont actually have much faith in. Anyways, without further ado lets get the links here for resources about Raymaster and then onto the documentation!</p>
+    <p>
+        ExWin is the Display Compositor for Raymaster OS. It is programmed in Rust using the Smithay library (which I just so happen to be learning as I write this document). 
+        A lot of this code is probably really crappy. I have no experience in what I'm doing, but I hope that I'll understand it more if I write what I learn as I learn it. 
+        Hopefully, this documentation helps you if you intend to contribute to this silly project that I don't actually have much faith in. 
+        Anyways, without further ado, let's get the links here for resources about Raymaster and then onto the documentation!
+    </p>
+
     <h3>Links</h3>
     <div style="text-align: center">
-    <ul>
-    <li><a href="https://discord.gg/cUP85QjAyk">Discord Server</a></li>
-    <li><a href="https://github.com/Raymaster-team">Github (has source code)</a></li>
-    </ul>
+        <ul>
+            <li><a href="https://discord.gg/cUP85QjAyk">Discord Server</a></li>
+            <li><a href="https://github.com/Raymaster-team">GitHub (source code)</a></li>
+            <li><a href="https://github.com/Raymaster-team/RaymasterOS">Raymaster</a></li>
+        </ul>
     </div>
 </body>
 </html>

@@ -30,6 +30,26 @@
         a {
             text-align: center;
         }
+
+        /* Ensure consistent navbar size */
+        #navbar {
+            background-color: #1B4D6E;
+            color: #FFFFFF;
+            padding: 15px 0; /* Adjust padding to match desired size */
+            min-height: 50px; /* Adjust height as needed */
+            text-align: center;
+        }
+
+        #navbar a {
+            color: #89CFF0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px; /* Adjust font size if necessary */
+        }
+
+        #navbar a:hover {
+            color: #B3E5FC;
+        }
     </style>
 </head>
 <body>
@@ -46,15 +66,17 @@
             .then(data => {
                 const navbar = document.getElementById('navbar');
                 navbar.innerHTML = data;
-                // Adjust navbar styles dynamically
+
+                // Ensure navbar styles remain consistent after fetching content
                 navbar.style.backgroundColor = '#1B4D6E';
                 navbar.style.color = '#FFFFFF';
-                navbar.style.padding = '10px 0';  // Adjusted padding
-                navbar.style.height = 'auto';  // Adjusted height to match
+                navbar.style.padding = '15px 0';  // Adjusted padding
+                navbar.style.minHeight = '50px'; // Adjusted height
 
                 const links = navbar.querySelectorAll('a');
                 links.forEach(link => {
                     link.style.color = '#89CFF0';
+                    link.style.fontSize = '18px'; // Match font size
                     link.addEventListener('mouseover', () => link.style.color = '#B3E5FC');
                     link.addEventListener('mouseout', () => link.style.color = '#89CFF0');
                 });
